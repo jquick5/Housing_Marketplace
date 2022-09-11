@@ -91,6 +91,8 @@ const Profile = () => {
 		}
 	};
 
+	const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`);
+
 	const onChange = (e) => {
 		setFormData((prevState) => ({
 			...prevState,
@@ -159,6 +161,7 @@ const Profile = () => {
 									listing={listing.data}
 									id={listing.id}
 									onDelete={() => onDelete(listing.id)}
+									onEdit={() => onEdit(listing.id)}
 								/>
 							))}
 						</ul>
